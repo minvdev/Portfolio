@@ -133,8 +133,10 @@ h3 {
 }
 /* Projects */
 .projects-wrap {
+  margin: 0 auto;
   margin-top: 3rem;
   display: grid;
+  max-width: calc(32rem + (3 * (2rem + 320px)));
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   padding: 0 16rem;
