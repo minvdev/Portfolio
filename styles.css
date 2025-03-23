@@ -1,0 +1,234 @@
+:root {
+  --background-navbar: #333333;
+  --color-navbar: #ffffff;
+  --background-about: #f4e8c1;
+  --color-about: #333333;
+  --background-projects: #6d8ea0;
+  --background-projects2: #455b66;
+  --color-projects: #ffffff;
+  --background-contact: #1c1c1c;
+  --background-contact2: #484848;
+  --color-contact: #f4e8c1;
+  --color-contact2: #aaa186;
+  --navbar-height: 4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  font-family: Poppins, sans-serif;
+}
+
+
+/* START NAVBAR SECTION */
+#navbar {
+  position: fixed;
+  height: var(--navbar-height);
+  width: 100%;
+  background-color: var(--background-navbar);
+  z-index: 99;
+}
+#navbar ul {
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 1.5rem;
+}
+.navbar-link {
+  text-decoration: none;
+  color: var(--color-navbar);
+  margin: 0 2rem;
+}
+.navbar-link:hover {
+  text-decoration: underline;
+}
+/* END NAVBAR SECTION */
+
+
+/* START WELCOME SECTION */
+#welcome-section {
+  background-color: var(--background-about);
+  color: var(--color-about);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+}
+h1 {
+  font-size: clamp(1rem, 5vw, 1.8rem);
+  font-weight: 700;
+}
+.subtitle {
+  display: flex;
+  align-items: flex-end;
+}
+h3 {
+  font-size: clamp(0.9rem, 4vw, 1.5rem);
+  font-weight: 500;
+}
+.underscore {
+  font-size: clamp(1rem, 5vw, 1.8rem);
+  animation: underscore-animation 1s step-start infinite;
+}
+@keyframes underscore-animation {
+  0% {
+    color: unset;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: unset;
+  }
+}
+.knowledge {
+  font-size: clamp(0.9rem, 4vw, 1.2rem);
+  margin-top: min(20px, 3vw);
+  text-align: center;
+}
+.knowledge ul {
+  margin: 0 auto;
+  width: 140px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.knowledge i {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+/* END WELCOME SECTION */
+
+
+/* START PROJECTS SECTION */
+#projects {
+  background-color: var(--background-projects);
+  color: var(--color-projects);
+  padding: 8rem 0;
+}
+/* Header */
+.projects-header {
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: min(1rem, 2vw);
+}
+.projects-header h1 {
+  font-size: clamp(1rem, 5vw, 1.9rem);
+}
+/* Projects */
+.projects-wrap {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  padding: 0 16rem;
+}
+.project-tile {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  box-shadow: 0 0 10px var(--background-projects2);
+}
+.project-tile:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 16px var(--background-projects2);
+}
+.project-image {
+  width: 100%;
+  height: calc(100% - 3.2rem);
+  object-fit: cover;
+}
+.project-name {
+  padding: 1rem 0;
+  text-align: center;
+  font-size: clamp(0.9rem, 4vw, 1.2rem);
+  background-color: var(--background-projects2);
+  color: var(--color-projects);
+}
+/* MEDIA QUERYS */
+@media (max-width: 1000px) {
+  #projects {
+    padding: 10vw 0;
+  }
+  .projects-wrap {
+    padding: 0 10vw;
+  }
+  .projects-header {
+    padding: 0 10vw;
+  }
+}
+@media (max-width: 400px) {
+  .projects-wrap {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+/* END PROJECTS SECTION */
+
+
+/* START CONTACT SECTION */
+#contact {
+  background-color: var(--background-contact);
+  color: var(--color-contact);
+  height: calc(100vh - var(--navbar-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10rem;
+  text-align: center;
+}
+.contact-header h1 {
+  font-size: clamp(1.6rem, 7vw, 2.4rem);
+}
+.contact-links {
+  margin-top: 10px;
+  display: flex;
+  gap: 2rem;
+}
+
+.contact-links a {
+  font-size: clamp(2rem, 10vw, 3rem);
+  color: var(--color-contact);
+}
+.contact-links i {
+  text-shadow: 0 0 10px var(--background-contact2);
+}
+.contact-links i:hover {
+  text-shadow: 0 0 10px var(--color-contact2);
+}
+/* END CONTACT SECTION */
+
+/* Hide navbar */
+@media (max-width: 600px) {
+  #navbar {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background-color: transparent;
+  }
+  .navbar-link {
+    color: transparent;
+  }
+  #welcome-section {
+    padding-bottom: calc(200px + var(--navbar-height));
+  }
+  #contact {
+    height: 100vh;
+  }
+}
