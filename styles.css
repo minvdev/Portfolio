@@ -81,7 +81,7 @@ h3 {
   font-weight: 500;
 }
 .underscore {
-  font-size: clamp(1rem, 5vw, 1.8rem);
+  font-size: clamp(1rem, 5vw, 1.5rem);
   animation: underscore-animation 1s step-start infinite;
 }
 @keyframes underscore-animation {
