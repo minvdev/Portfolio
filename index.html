@@ -1,98 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link rel="stylesheet" href="styles.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.googleapis.com"
+		/>
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<title>Portfolio</title>
+	</head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-  <title>Portfolio</title>
-</head>
+	<body>
+		<nav id="navbar">
+			<ul>
+				<li>
+					<a class="navbar-link" href="#welcome-section"
+						>About</a
+					>
+				</li>
+				<li>
+					<a class="navbar-link" href="#projects"
+						>Projects</a
+					>
+				</li>
+				<li>
+					<a class="navbar-link" href="#contact">Contact</a>
+				</li>
+			</ul>
+		</nav>
+		<section id="welcome-section">
+			<h1>Hey I am Álvaro Martínez Iniesta</h1>
+			<div class="subtitle">
+				<h3>< Pyhton backend developer /></h3>
+			</div>
 
-<body>
-  <nav id="navbar">
-    <ul>
-      <li><a class="navbar-link" href="#welcome-section">About</a></li>
-      <li><a class="navbar-link" href="#projects">Projects</a></li>
-      <li><a class="navbar-link" href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-  <section id="welcome-section">
-    <h1>Hey I am Álvaro Martínez Iniesta</h1>
-    <div class="subtitle">
-      <h3>
-        < Pyhton backend developer />
-      </h3>
-    </div>
+			<div class="knowledge">
+				<p class="knowledge-title">
+					I have been working with
+					<span class="underscore">_</span>
+				</p>
+				<ul>
+					<li><i class="fab fa-python"> Python</i></li>
+					<li><i class="fas fa-flask"> Python-Flask</i></li>
+					<li><i class="fab fa-html5"> Html</i></li>
+					<li><i class="fab fa-css3"> Css</i></li>
+					<li><i class="fas fa-database"> MySQL</i></li>
+					<li>
+						<i class="fas fa-database"> JavaScript</i>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section id="projects">
+			<header class="projects-header">
+				<h1>
+					These are some of the projects I have been working
+					on
+				</h1>
+			</header>
+			<div class="projects-wrap">
+				<div class="project-tile">
+					<div class="carousel-wrapper">
+						<button
+							class="carousel-button"
+							data-direction="prev"
+						>
+							<i class="fas fa-chevron-left"></i>
+						</button>
+						<button
+							class="carousel-button"
+							data-direction="next"
+						>
+							<i class="fas fa-chevron-right"></i>
+						</button>
 
-    <div class="knowledge">
-      <p class="knowledge-title">I have been working with <span class="underscore">_</span></p>
-      <ul>
-        <li><i class="fab fa-python"> Python</i></li>
-        <li><i class="fas fa-flask"> Python-Flask</i></li>
-        <li><i class="fab fa-html5"> Html</i></li>
-        <li><i class="fab fa-css3"> Css</i></li>
-        <li><i class="fas fa-database"> MySQL</i></li>
-        <li><i class="fab fa-js"> JavaScript</i></li>
-      </ul>
-    </div>
-  </section>
-  <section id="projects">
-    <header class="projects-header">
-      <h1>These are some of the projects I have been working on</h1>
-    </header>
-    <div class="projects-wrap">
-      <a class="project-tile" href="https://minvdev.github.io/Survey-Form-Page" target="_blank">
-        <img class="project-image"
-          src="https://raw.githubusercontent.com/minvdev/Survey-Form-Page/refs/heads/main/Survey%20form%20preview.jpg"
-          alt="project">
-        <p class="project-name">Survey Form Page</p><!-- name-project -->
-      </a>
-      <a class="project-tile" href="https://minvdev.github.io/Tribute-Page" target="_blank">
-        <img class="project-image"
-          src="https://raw.githubusercontent.com/minvdev/Tribute-Page/refs/heads/main/Tribute%20Page%20preview.jpg"
-          alt="project">
-        <p class="project-name">Tribute Page</p><!-- name-project -->
-      </a>
-      <a class="project-tile" href="https://minvdev.github.io/Technical-Documentation-Page" target="_blank">
-        <img class="project-image"
-          src="https://raw.githubusercontent.com/minvdev/Technical-Documentation-Page/refs/heads/main/Technical%20Documentation%20Page%20preview.jpg"
-          alt="project">
-        <p class="project-name">Technical Documentation Page</p><!-- name-project -->
-      </a>
-      <a class="project-tile" href="https://minvdev.github.io/Landing-Page" target="_blank">
-        <img class="project-image"
-          src="https://raw.githubusercontent.com/minvdev/Landing-Page/refs/heads/main/Landing%20Page%20preview.jpg"
-          alt="project">
-        <p class="project-name">Landing Page</p><!-- name-project -->
-      </a>
-    </div>
-  </section>
-  <section id="contact">
-    <div class="contact-header">
-      <h1>You would interested in working together?</h1>
-    </div>
-    <div class="contact-links">
-      <a id="profile-link" href="https://github.com/minvdev" target="_blank">
-        <!-- Github -->
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="mailto:minvdev@gmail.com">
-        <!-- Mail -->
-        <i class="fas fa-envelope"></i>
-      </a>
-      <a href="https://www.linkedin.com/in/álvaro-martínez-iniesta-00b803357/?trk=opento_sprofile_details"
-        target="_blank">
-        <!-- LinkedIn -->
-        <i class="fab fa-linkedin"></i>
-      </a>
-    </div>
-  </section>
-</body>
+						<ul class="carousel-track">
+							<li class="carousel-slide">
+								<img
+									src="static/wcart/wcart-1.png"
+									alt="RestauÑin first view"
+								/>
+							</li>
+							<li class="carousel-slide">
+								<img
+									src="static/wcart/wcart-2.png"
+									alt="RestauÑin second view"
+								/>
+							</li>
+							<li class="carousel-slide">
+								<img
+									src="static/wcart/wcart-3.png"
+									alt="RestauÑin third view"
+								/>
+							</li>
+							<li class="carousel-slide">
+								<img
+									src="static/wcart/wcart-4.png"
+									alt="RestauÑin fourth view"
+								/>
+							</li>
+							<li class="carousel-slide">
+								<img
+									src="static/wcart/wcart-5.png"
+									alt="RestauÑin fifth view"
+								/>
+							</li>
+							<li class="carousel-slide">
+								<img
+									src="static/wcart/wcart-6.png"
+									alt="RestauÑin sixth view"
+								/>
+							</li>
+							<li class="carousel-slide">
+								<img
+									src="static/wcart/wcart-7.png"
+									alt="RestauÑin seventh view"
+								/>
+							</li>
+							<li class="carousel-slide">
+								<img
+									src="static/wcart/wcart-admin-1.png"
+									alt="RestauÑin eighth view"
+								/>
+							</li>
+							<li class="carousel-slide">
+								<img
+									src="static/wcart/wcart-admin-2.png"
+									alt="RestauÑin ninth view"
+								/>
+							</li>
+							<li class="carousel-slide">
+								<img
+									src="static/wcart/wcart-admin-3.png"
+									alt="RestauÑin tenth view"
+								/>
+							</li>
+							<li class="carousel-slide">
+								<img
+									src="static/wcart/wcart-admin-4.png"
+									alt="RestauÑin eleventh view"
+								/>
+							</li>
+							<li class="carousel-slide">
+								<img
+									src="static/wcart/wcart-admin-5.png"
+									alt="RestauÑin twelfth view"
+								/>
+							</li>
+						</ul>
+					</div>
 
+					<a
+						href="https://wcart.onrender.com"
+						target="_blank"
+					>
+						<p class="project-name">RestauÑin</p>
+					</a>
+				</div>
+
+				<div class="project-tile">
+					<div class="carousel-wrapper">
+						<button
+							class="carousel-button"
+							data-direction="prev"
+						>
+							<i class="fas fa-chevron-left"></i>
+						</button>
+						<button
+							class="carousel-button"
+							data-direction="next"
+						>
+							<i class="fas fa-chevron-right"></i>
+						</button>
+						<ul class="carousel-track">
+							<li class="carousel-slide">
+								<img
+									src="static/landing/landing-1.png"
+									alt="Landing page first view"
+								/>
+							</li>
+							<li class="carousel-slide">
+								<img
+									src="static/landing/landing-2.png"
+									alt="Landing page second view"
+								/>
+							</li>
+						</ul>
+					</div>
+
+					<a
+						href="https://minvdev.github.io/Landing-Page"
+						target="_blank"
+					>
+						<p class="project-name">Landing Page</p>
+					</a>
+				</div>
+			</div>
+		</section>
+		<section id="contact">
+			<div class="contact-header">
+				<h1>You would interested in working together?</h1>
+			</div>
+			<div class="contact-links">
+				<a
+					id="profile-link"
+					href="https://github.com/minvdev"
+					target="_blank"
+				>
+					<!-- Github -->
+					<i class="fab fa-github"></i>
+				</a>
+				<a href="mailto:minvdev@gmail.com">
+					<!-- Mail -->
+					<i class="fas fa-envelope"></i>
+				</a>
+				<a
+					href="https://www.linkedin.com/in/álvaro-martínez-iniesta-00b803357/?trk=opento_sprofile_details"
+					target="_blank"
+				>
+					<!-- LinkedIn -->
+					<i class="fab fa-linkedin"></i>
+				</a>
+			</div>
+		</section>
+		<script src="main.js"></script>
+	</body>
 </html>
