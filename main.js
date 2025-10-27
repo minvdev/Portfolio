@@ -6,7 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const track = wrapper.querySelector(
             ".carousel-track"
         );
-        const slides = Array.from(track.children);
         const prevButton = wrapper.querySelector(
             '[data-direction="prev"]'
         );
@@ -19,8 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         function moveToSlide(direction) {
-            const slideWidth =
-                slides[0].getBoundingClientRect().width;
+            const slideWidth = track.clientWidth;
             const moveAmount = slideWidth * direction;
             track.scrollBy({
                 left: moveAmount,
